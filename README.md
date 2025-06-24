@@ -61,7 +61,7 @@ Pasarela-Pago-App/
 
 ## 📸 Capturas de Pantalla
 
-<p><em>Vista Previa de las principales pantallas de la aplicación:</em></p>
+<p><em>Vista Previa de las principales pantallas de la aplicación</em></p>
 
 <p><strong>Login</strong></p>
 <p align="center">
