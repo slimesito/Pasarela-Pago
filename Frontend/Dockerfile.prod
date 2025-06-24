@@ -1,0 +1,18 @@
+# Etapa 1: Build de React
+FROM node:20-alpine as build
+
+WORKDIR /app
+
+COPY package*.json ./
+RUN npm install
+
+COPY . .
+
+# Asegura permisos para vite (evita errores como antes)
+RUN chmod +x ./node_modules/.bin/vite
+RUN npm run build
+
+# Etapa 2: nginx sirve frontend
+FROM nginx:alpine
+
+COPY --from=build /app/dist /usr/share/nginx/html

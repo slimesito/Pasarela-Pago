@@ -1,0 +1,21 @@
+FROM php:8.2-fpm
+
+WORKDIR /var/www/html
+
+# Instalar dependencias necesarias
+RUN apt-get update && apt-get install -y \
+    zip unzip curl git libpq-dev libzip-dev \
+    && docker-php-ext-install pdo pdo_pgsql zip
+
+# Instalar Composer
+COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
+
+# Copiar la app y ejecutar Composer
+COPY . .
+
+RUN composer install --optimize-autoloader --no-dev \
+    && php artisan config:cache \
+    && php artisan route:cache \
+    && php artisan view:cache
+
+CMD ["php-fpm"]

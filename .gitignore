@@ -1,0 +1,73 @@
+# -------------------
+# Archivos del sistema
+# -------------------
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.swp
+~$*
+
+# -------------------
+# Backend (Laravel)
+# -------------------
+Pasarela-Pago-API/.env
+Pasarela-Pago-API/.env.*
+Pasarela-Pago-API/.phpunit.cache
+Pasarela-Pago-API/storage/*.key
+Pasarela-Pago-API/public/storage
+Pasarela-Pago-API/storage/framework/*
+Pasarela-Pago-API/storage/logs/*
+Pasarela-Pago-API/public/hot
+Pasarela-Pago-API/public/build
+Pasarela-Pago-API/vendor/
+Pasarela-Pago-API/node_modules/
+Pasarela-Pago-API/composer.lock
+Pasarela-Pago-API/npm-debug.log
+Pasarela-Pago-API/yarn-error.log
+Pasarela-Pago-API/.phpunit.result.cache
+Pasarela-Pago-API/Homestead.json
+Pasarela-Pago-API/Homestead.yaml
+Pasarela-Pago-API/auth.json
+
+# -------------------
+# Frontend (React)
+# -------------------
+Frontend/.env
+Frontend/.env.*
+Frontend/node_modules/
+Frontend/.next/
+Frontend/out/
+Frontend/build/
+Frontend/dist/
+Frontend/dist-ssr/
+Frontend/.eslintcache
+Frontend/*.local
+Frontend/npm-debug.log*
+Frontend/yarn-debug.log*
+Frontend/yarn-error.log*
+Frontend/pnpm-debug.log*
+Frontend/lerna-debug.log*
+nginx
+
+# -------------------
+# Entornos de desarrollo/IDEs
+# -------------------
+# Visual Studio Code
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.fleet/
+.settings/
+*.code-workspace
+.dockerignore
+docker-compose.prod.yml
+
+# -------------------
+# Logs y reportes
+# -------------------
+logs/
+*.log
