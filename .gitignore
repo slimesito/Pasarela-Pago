@@ -16,8 +16,8 @@ Thumbs.db
 # -------------------
 Pasarela-Pago-API/.env
 Pasarela-Pago-API/.env.*
-Pasarela-Pago-API/.phpunit.xml
-Pasarela-Pago-API/.phpunit.cache
+Pasarela-Pago-API/phpunit.xml
+Pasarela-Pago-API/phpunit.cache
 Pasarela-Pago-API/storage/*.key
 Pasarela-Pago-API/public/storage
 Pasarela-Pago-API/storage/framework/*
