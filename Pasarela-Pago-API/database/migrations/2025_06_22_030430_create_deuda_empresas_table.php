@@ -9,17 +9,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('deuda_empresas', function (Blueprint $table) {
-            $table->primary('id')->autoIncrement()->startingValue(1);
-            $table->integer('empresa_id')->unique();
+            $table->id();
+            $table->foreignId('empresa_id')
+                  ->constrained('empresas')
+                  ->cascadeOnDelete();
             $table->decimal('deuda_total', 15, 2);
             $table->timestamp('fecha_creacion')->useCurrent();
             $table->timestamp('ultima_actualizacion')->useCurrent()->useCurrentOnUpdate();
 
-            $table->foreign('empresa_id')->references('id')->on('empresas');
-        });
-
-        // Añadir índice adicional
-        Schema::table('deuda_empresas', function (Blueprint $table) {
             $table->index('empresa_id');
         });
     }

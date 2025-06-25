@@ -9,13 +9,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('empresas', function (Blueprint $table) {
-            $table->primary('id')->autoIncrement()->startingValue(1);
+            // Crea id BIGSERIAL NOT NULL PRIMARY KEY
+            $table->id();
             $table->string('nombre', 100);
             $table->string('rif', 20)->unique();
             $table->boolean('activa')->default(true);
             $table->timestamp('fecha_registro')->useCurrent();
             $table->timestamp('ultima_actualizacion')->useCurrent()->useCurrentOnUpdate();
-
         });
     }
 

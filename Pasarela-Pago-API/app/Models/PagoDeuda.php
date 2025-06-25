@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class PagoDeuda extends Model
 {
-    protected $table = 'pasarela_pago.pagos_deuda';
+    protected $table = 'pagos_deuda';
     public $timestamps = false;
 
     protected $fillable = ['empresa_id', 'monto_pago', 'referencia'];

@@ -9,8 +9,9 @@ class Empresa extends Model
 {
     use HasFactory;
 
-    protected $table = 'pasarela_pago.empresas';
+    protected $table = 'empresas';
     protected $fillable = ['nombre', 'rif', 'activa'];
+    public $timestamps = false;
 
     public function deuda()
     {

@@ -42,7 +42,6 @@ class AuthController extends Controller
             ]);
         }
 
-        // Revocar todos los tokens anteriores para mayor seguridad
         $user->tokens()->delete();
 
         $token = $user->createToken('api_token')->plainTextToken;

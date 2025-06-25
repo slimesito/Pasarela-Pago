@@ -8,7 +8,7 @@ class RegisterRequest extends FormRequest
 {
     public function authorize(): bool
     {
-        return true; // puedes validar roles aquí si deseas
+        return true;
     }
 
     public function rules(): array
