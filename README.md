@@ -122,25 +122,31 @@ npm run dev
 
 ---
 
-<!-- ## 🧪 Testing
+## 🧪 Testing
 
-The system includes tests to verify endpoints and rate limiting:
+El sistema incluye pruebas automatizadas para verificar los endpoints principales de autenticación y gestión de deudas de empresas, así como pruebas de ejemplo para la funcionalidad básica de la aplicación. Para ejecutar los tests, utiliza el siguiente comando:
 
 ```bash
 php artisan test
 ```
 
-Verified test cases:
+Casos de prueba verificados:
 
-✅ List citizens  
-✅ Search citizen by ID number and nationality  
-✅ Register new citizen  
-✅ Update citizen  
-✅ Request limit enforcement  
-✅ Blocking after exceeding request limit  
-✅ Reset after cooldown period  
+✅ **Registro exitoso de usuario**: Verifica que un nuevo usuario puede registrarse correctamente a través del endpoint `/api/register` (prueba: `AuthTest::test_register_user_successfully`).  
 
---- -->
+✅ **Inicio de sesión exitoso**: Confirma que un usuario puede autenticarse con credenciales válidas y recibir un token mediante `/api/login` (prueba: `AuthTest::test_login_successful`).  
+
+✅ **Cierre de sesión**: Asegura que un usuario autenticado puede cerrar sesión y revocar sus tokens usando `/api/logout` (prueba: `AuthTest::test_logout_user`).  
+
+✅ **Consulta de deuda exitosa**: Comprueba que se puede consultar la deuda de una empresa por su RIF a través de `/api/deuda/consultar` (prueba: `DeudaEmpresaTest::test_consultar_deuda_exitosa`).  
+
+✅ **Pago de deuda exitoso**: Valida que un usuario autenticado puede registrar un pago de deuda correctamente usando `/api/deuda/pagar` (prueba: `DeudaEmpresaTest::test_pago_deuda_exitosa`).  
+
+✅ **Verificación básica de unidad**: Confirma una aserción simple (`true` es `true`) para pruebas unitarias (prueba: `ExampleTest::that_true_is_true`).  
+
+✅ **Respuesta exitosa de la aplicación**: Asegura que la aplicación retorna una respuesta exitosa en una solicitud básica (prueba: `ExampleTest::the_application_returns_a_successful_response`).
+
+---
 
 ## 📄 Licencia
 
